@@ -1,0 +1,13 @@
+{
+  "name": "@conduit/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Conduit Tauri desktop application",
+  "scripts": {
+    "dev": "echo \"[desktop] placeholder — Tauri + React shell lands in Phase 1: 'Basic Tauri shell with React routing'\"",
+    "build": "echo \"[desktop] build placeholder\"",
+    "lint": "echo \"[desktop] lint placeholder\"",
+    "type-check": "echo \"[desktop] type-check placeholder\"",
+    "test": "echo \"[desktop] test placeholder\""
+  }
+}

@@ -1,0 +1,17 @@
+[package]
+name = "relay-peer"
+description = "Stateless SSH proxy deployed to a free-tier VPS"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "relay-peer"
+path = "src/main.rs"
+
+[dependencies]
+# Kept deliberately minimal — this binary is ~100 lines of SSH port forwarding
+# (Phase 4). Dependencies are wired from `[workspace.dependencies]` then.

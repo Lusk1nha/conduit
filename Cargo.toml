@@ -1,6 +1,61 @@
-[package]
-name = "conduit"
+[workspace]
+resolver = "3"
+members = [
+    "crates/shared",
+    "crates/relay",
+    "crates/relay-peer",
+]
+# `apps/desktop/src-tauri` joins the workspace when the Tauri shell is
+# scaffolded (Phase 1 — "Basic Tauri shell with React routing").
+
+[workspace.package]
 version = "0.1.0"
 edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+authors = ["Lucas Pedro da Hora"]
+repository = "https://github.com/Lusk1nha/conduit"
 
-[dependencies]
+# Central version catalog for every crate in the workspace. Individual crates
+# opt in with `dep = { workspace = true }`. Versions verified current as of the
+# initial monorepo setup; bump here once to update the whole workspace.
+[workspace.dependencies]
+# async runtime
+tokio = { version = "1", features = ["full"] }
+
+# web framework (relay HTTP API + SSE)
+axum = { version = "0.8", features = ["macros"] }
+
+# reverse-SSH tunneling
+russh = "0.61"
+
+# database — compile-time checked queries
+sqlx = { version = "0.9", features = ["sqlite", "runtime-tokio", "macros", "uuid", "chrono"] }
+
+# serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# time-ordered IDs
+uuid = { version = "1", features = ["v7", "serde"] }
+
+# time
+chrono = { version = "0.4", features = ["serde"] }
+
+# error handling
+thiserror = "2"
+anyhow = "1"
+
+# config
+toml = "1"
+
+# HTTP client (webhook delivery)
+reqwest = { version = "0.13", features = ["json"] }
+
+# observability
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[profile.release]
+strip = true
+lto = "thin"

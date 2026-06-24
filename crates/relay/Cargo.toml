@@ -1,0 +1,18 @@
+[package]
+name = "relay"
+description = "Conduit reverse-SSH webhook tunnel daemon"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "relay"
+path = "src/main.rs"
+
+[dependencies]
+conduit-shared = { path = "../shared" }
+# Implementation dependencies (axum, sqlx, russh, reqwest, tokio, …) are wired
+# from `[workspace.dependencies]` as the daemon is built out in Phase 3 / 4.

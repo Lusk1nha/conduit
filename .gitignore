@@ -1,1 +1,30 @@
+# Rust
 /target
+**/*.rs.bk
+
+# Node / pnpm
+node_modules/
+.pnpm-store/
+
+# Turborepo
+.turbo/
+
+# Build output
+dist/
+build/
+
+# Tauri
+apps/desktop/src-tauri/target/
+
+# SQLite databases
+*.db
+*.db-shm
+*.db-wal
+
+# Environment
+.env
+.env.local
+
+# Editor / OS
+.DS_Store
+*.log
