@@ -19,8 +19,20 @@ catalog:
   zustand: 5.0.14
   "@tanstack/react-query": 5.101.1
   tailwindcss: 4.3.1
+  "@tailwindcss/vite": 4.3.1
   typescript: 6.0.3
   vite: 8.1.0
   "@vitejs/plugin-react": 6.0.3
   "@tauri-apps/cli": 2.11.3
+  "@types/react": ^19
+  "@types/react-dom": ^19
   "@playwright/test": 1.61.1
+  # Shared frontend packages (@conduit/ui, @conduit/theme, @conduit/utils)
+  "@base-ui/react": 1.6.0
+  "@phosphor-icons/react": 2.1.10
+  motion: 12.41.0
+  class-variance-authority: 0.7.1
+  clsx: 2.1.1
+  tailwind-merge: 3.6.0
+  "@fontsource-variable/jetbrains-mono": 5.2.8
+  cross-env: 10.1.0

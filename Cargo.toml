@@ -4,9 +4,8 @@ members = [
     "crates/shared",
     "crates/relay",
     "crates/relay-peer",
+    "apps/desktop/src-tauri",
 ]
-# `apps/desktop/src-tauri` joins the workspace when the Tauri shell is
-# scaffolded (Phase 1 — "Basic Tauri shell with React routing").
 
 [workspace.package]
 version = "0.1.0"
@@ -30,7 +29,7 @@ axum = { version = "0.8", features = ["macros"] }
 russh = "0.61"
 
 # database — compile-time checked queries
-sqlx = { version = "0.9", features = ["sqlite", "runtime-tokio", "macros", "uuid", "chrono"] }
+sqlx = { version = "0.9", features = ["sqlite", "runtime-tokio", "macros", "migrate", "uuid", "chrono"] }
 
 # serialization
 serde = { version = "1", features = ["derive"] }

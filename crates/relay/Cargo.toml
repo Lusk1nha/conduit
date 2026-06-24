@@ -14,5 +14,11 @@ path = "src/main.rs"
 
 [dependencies]
 conduit-shared = { path = "../shared" }
-# Implementation dependencies (axum, sqlx, russh, reqwest, tokio, …) are wired
-# from `[workspace.dependencies]` as the daemon is built out in Phase 3 / 4.
+# Implementation dependencies (axum, russh, reqwest, tokio, …) are wired from
+# `[workspace.dependencies]` as the daemon is built out in Phase 3 / 4.
+
+[dev-dependencies]
+# Used by tests/migrations.rs to verify the embedded migrations apply cleanly.
+# Promoted to a runtime dependency when the daemon bootstrap lands (Phase 3).
+sqlx = { workspace = true }
+tokio = { workspace = true }

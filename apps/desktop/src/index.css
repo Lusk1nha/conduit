@@ -1,0 +1,82 @@
+@import "@fontsource-variable/jetbrains-mono";
+@import "tailwindcss";
+@import "@conduit/theme/theme.css";
+
+/* Tailwind v4 scans these workspace package sources for utility classes. */
+@source "../../../packages/ui/src/**/*.{ts,tsx}";
+@source "../../../packages/theme/src/**/*.{ts,tsx}";
+
+@theme {
+  --font-sans: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-hover: var(--accent-hover);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-destructive: var(--destructive);
+  --color-destructive-fg: var(--destructive-fg);
+  --color-ring: var(--ring);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+html {
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--fg);
+  text-rendering: optimizeLegibility;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+/* Smooth theme transitions. */
+html[data-theme] * {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}

@@ -1,0 +1,391 @@
+/*
+ * @conduit/theme — CSS variable definitions for all themes.
+ *
+ * Import this file ONCE in the consumer app after `@import "tailwindcss"`.
+ * The consumer app also needs an `@theme` block that maps these vars
+ * to Tailwind utilities (see apps/desktop/src/index.css).
+ *
+ * To add a new theme: add a new [data-theme="<id>"] block here AND
+ * register it in src/themes.ts.
+ */
+
+/*
+ * @conduit/theme — CSS variable definitions for all themes.
+ */
+
+/* ─── Midnight (GitHub dark) ────────────────────────────────────────────────── */
+:root,
+[data-theme="midnight"] {
+  color-scheme: dark;
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface-2: #21262d;
+  --surface-hover: #30363d;
+  --border: #30363d;
+  --fg: #e6edf3;
+  --muted: #7d8590;
+  --accent: #58a6ff;
+  --accent-hover: #79c0ff;
+  --accent-fg: #0d1117;
+  --ring: #58a6ff80;
+  --success: #3fb950;
+  --warning: #d29922;
+  --destructive: #f85149;
+  --destructive-fg: #ffffff;
+}
+
+/* ─── Dawn (Clean light) ───────────────────────────────────────────────────── */
+[data-theme="dawn"] {
+  color-scheme: light;
+  --bg: #ffffff;
+  --surface: #f6f8fa;
+  --surface-2: #eaeef2;
+  --surface-hover: #d0d7de;
+  --border: #d0d7de;
+  --fg: #24292f;
+  --muted: #57606a;
+  --accent: #0969da;
+  --accent-hover: #0860ca;
+  --accent-fg: #ffffff;
+  --ring: #0969da40;
+  --success: #1a7f37;
+  --warning: #9a6700;
+  --destructive: #cf222e;
+  --destructive-fg: #ffffff;
+}
+
+/* ─── Dracula ──────────────────────────────────────────────────────────────── */
+[data-theme="dracula"] {
+  color-scheme: dark;
+  --bg: #282a36;
+  --surface: #343746;
+  --surface-2: #44475a;
+  --surface-hover: #6272a4;
+  --border: #6272a4;
+  --fg: #f8f8f2;
+  --muted: #b0b3c8;
+  --accent: #bd93f9;
+  --accent-hover: #cfa9ff;
+  --accent-fg: #282a36;
+  --ring: #bd93f960;
+  --success: #50fa7b;
+  --warning: #f1fa8c;
+  --destructive: #ff5555;
+  --destructive-fg: #f8f8f2;
+}
+
+/* ─── Nord ─────────────────────────────────────────────────────────────────── */
+[data-theme="nord"] {
+  color-scheme: dark;
+  --bg: #2e3440;
+  --surface: #3b4252;
+  --surface-2: #434c5e;
+  --surface-hover: #4c566a;
+  --border: #4c566a;
+  --fg: #eceff4;
+  --muted: #a3adc0;
+  --accent: #88c0d0;
+  --accent-hover: #98d1e1;
+  --accent-fg: #2e3440;
+  --ring: #88c0d060;
+  --success: #a3be8c;
+  --warning: #ebcb8b;
+  --destructive: #bf616a;
+  --destructive-fg: #eceff4;
+}
+
+/* ─── Catppuccin ───────────────────────────────────────────────────────────── */
+[data-theme="catppuccin"] {
+  color-scheme: dark;
+  --bg: #1e1e2e;
+  --surface: #313244;
+  --surface-2: #45475a;
+  --surface-hover: #585b70;
+  --border: #585b70;
+  --fg: #cdd6f4;
+  --muted: #a6adc8;
+  --accent: #cba6f7;
+  --accent-hover: #d7bdf9;
+  --accent-fg: #1e1e2e;
+  --ring: #cba6f760;
+  --success: #a6e3a1;
+  --warning: #f9e2af;
+  --destructive: #f38ba8;
+  --destructive-fg: #1e1e2e;
+}
+
+/* ─── Rose Pine ────────────────────────────────────────────────────────────── */
+[data-theme="rose-pine"] {
+  color-scheme: dark;
+  --bg: #191724;
+  --surface: #1f1d2e;
+  --surface-2: #26233a;
+  --surface-hover: #44415a;
+  --border: #44415a;
+  --fg: #e0def4;
+  --muted: #908caa;
+  --accent: #c4a7e7;
+  --accent-hover: #d2bcf0;
+  --accent-fg: #191724;
+  --ring: #c4a7e760;
+  --success: #9ccfd8;
+  --warning: #f6c177;
+  --destructive: #eb6f92;
+  --destructive-fg: #ffffff;
+}
+
+/* ─── Cyberpunk ────────────────────────────────────────────────────────────── */
+[data-theme="cyberpunk"] {
+  color-scheme: dark;
+  --bg: #000b18;
+  --surface: #001730;
+  --surface-2: #002244;
+  --surface-hover: #003b6f;
+  --border: #003b6f;
+  --fg: #f0f6fc;
+  --muted: #829cb8;
+  --accent: #fdf500;
+  --accent-hover: #fffb80;
+  --accent-fg: #000000;
+  --ring: #fdf50060;
+  --success: #00ff9f;
+  --warning: #ffb800;
+  --destructive: #ff003c;
+  --destructive-fg: #ffffff;
+}
+
+/* ─── Forest ───────────────────────────────────────────────────────────────── */
+[data-theme="forest"] {
+  color-scheme: dark;
+  --bg: #0f1c16;
+  --surface: #16281f;
+  --surface-2: #1d3529;
+  --surface-hover: #2e503e;
+  --border: #2e503e;
+  --fg: #d1e0d7;
+  --muted: #8fa899;
+  --accent: #4ade80;
+  --accent-hover: #60e493;
+  --accent-fg: #062011;
+  --ring: #4ade8060;
+  --success: #22c55e;
+  --warning: #facc15;
+  --destructive: #ef4444;
+  --destructive-fg: #ffffff;
+}
+
+/* ─── Tokyo Night ──────────────────────────────────────────────────────────── */
+[data-theme="tokyo-night"] {
+  color-scheme: dark;
+  --bg: #1a1b26;
+  --surface: #24283b;
+  --surface-2: #2f3549;
+  --surface-hover: #414868;
+  --border: #414868;
+  --fg: #c0caf5;
+  --muted: #565f89;
+  --accent: #7aa2f7;
+  --accent-hover: #91b4f9;
+  --accent-fg: #1a1b26;
+  --ring: #7aa2f760;
+  --success: #9ece6a;
+  --warning: #e0af68;
+  --destructive: #f7768e;
+  --destructive-fg: #ffffff;
+}
+
+/* ─── OLED Black ───────────────────────────────────────────────────────────── */
+[data-theme="oled-black"] {
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #09090b;
+  --surface-2: #18181b;
+  --surface-hover: #27272a;
+  --border: #27272a;
+  --fg: #fafafa;
+  --muted: #a1a1aa;
+  --accent: #ffffff;
+  --accent-hover: #f0f0f0;
+  --accent-fg: #000000;
+  --ring: #ffffff40;
+  --success: #4ade80;
+  --warning: #facc15;
+  --destructive: #ef4444;
+  --destructive-fg: #ffffff;
+}
+
+/* ─── Synthwave ────────────────────────────────────────────────────────────── */
+[data-theme="synthwave"] {
+  color-scheme: dark;
+  --bg: #262335;
+  --surface: #34294f;
+  --surface-2: #42326b;
+  --surface-hover: #52368c;
+  --border: #52368c;
+  --fg: #f8f8f2;
+  --muted: #848bbd;
+  --accent: #ff7edb;
+  --accent-hover: #ff98e3;
+  --accent-fg: #262335;
+  --ring: #ff7edb60;
+  --success: #36f9f6;
+  --warning: #fede5d;
+  --destructive: #fe4450;
+  --destructive-fg: #ffffff;
+}
+
+/* ─── Night Runner ─────────────────────────────────────────────────────────── */
+[data-theme="night-runner"] {
+  color-scheme: dark;
+  --bg: #090a0f;
+  --surface: #12141f;
+  --surface-2: #1c1e2e;
+  --surface-hover: #2a2d45;
+  --border: #2a2d45;
+  --fg: #e2e8f0;
+  --muted: #64748b;
+  --accent: #00f0ff;
+  --accent-hover: #33f4ff;
+  --accent-fg: #000000;
+  --ring: #00f0ff60;
+  --success: #39ff14;
+  --warning: #ffea00;
+  --destructive: #ff0055;
+  --destructive-fg: #ffffff;
+}
+
+/* ─── Terminal ─────────────────────────────────────────────────────────────── */
+[data-theme="terminal"] {
+  color-scheme: dark;
+  --bg: #050505;
+  --surface: #0a0f0a;
+  --surface-2: #111a11;
+  --surface-hover: #1a331a;
+  --border: #1a331a;
+  --fg: #ccffcc;
+  --muted: #4d994d;
+  --accent: #00ff41;
+  --accent-hover: #33ff6a;
+  --accent-fg: #050505;
+  --ring: #00ff4160;
+  --success: #00ff41;
+  --warning: #d4ff00;
+  --destructive: #ff3333;
+  --destructive-fg: #050505;
+}
+
+/* ─── Outrun ───────────────────────────────────────────────────────────────── */
+[data-theme="outrun"] {
+  color-scheme: dark;
+  --bg: #14081c;
+  --surface: #220e33;
+  --surface-2: #30144a;
+  --surface-hover: #4a2175;
+  --border: #4a2175;
+  --fg: #fde6ff;
+  --muted: #9c7bb5;
+  --accent: #ff9e00;
+  --accent-hover: #ffb433;
+  --accent-fg: #14081c;
+  --ring: #ff9e0060;
+  --success: #00ffcc;
+  --warning: #ffd700;
+  --destructive: #ff2a6d;
+  --destructive-fg: #ffffff;
+}
+
+/* ─── LIGHT MODES ──────────────────────────────────────────────────────────── */
+[data-theme="paper"] {
+  color-scheme: light;
+  --bg: #f4ece0;
+  --surface: #eaddcf;
+  --surface-2: #dcd0c4;
+  --surface-hover: #c8b9ab;
+  --border: #c8b9ab;
+  --fg: #5a524a;
+  --muted: #8c8278;
+  --accent: #8b7355;
+  --accent-hover: #a18768;
+  --accent-fg: #ffffff;
+  --ring: #8b735540;
+  --success: #5c7e5a;
+  --warning: #a67c00;
+  --destructive: #b33939;
+  --destructive-fg: #ffffff;
+}
+
+[data-theme="slate-light"] {
+  color-scheme: light;
+  --bg: #f8fafc;
+  --surface: #f1f5f9;
+  --surface-2: #e2e8f0;
+  --surface-hover: #cbd5e1;
+  --border: #cbd5e1;
+  --fg: #334155;
+  --muted: #64748b;
+  --accent: #475569;
+  --accent-hover: #64748b;
+  --accent-fg: #ffffff;
+  --ring: #47556940;
+  --success: #16a34a;
+  --warning: #d97706;
+  --destructive: #dc2626;
+  --destructive-fg: #ffffff;
+}
+
+[data-theme="serene"] {
+  color-scheme: light;
+  --bg: #fdfcf9;
+  --surface: #f4f2ee;
+  --surface-2: #e9e6e0;
+  --surface-hover: #dcd9d2;
+  --border: #dcd9d2;
+  --fg: #4a4a44;
+  --muted: #9b9a95;
+  --accent: #788d75;
+  --accent-hover: #8da28a;
+  --accent-fg: #ffffff;
+  --ring: #788d7540;
+  --success: #557053;
+  --warning: #a08c5c;
+  --destructive: #a85c5c;
+  --destructive-fg: #ffffff;
+}
+
+[data-theme="ice"] {
+  color-scheme: light;
+  --bg: #f0f7f9;
+  --surface: #e1eff2;
+  --surface-2: #d0e4e8;
+  --surface-hover: #b8d2d8;
+  --border: #b8d2d8;
+  --fg: #2c4247;
+  --muted: #748d92;
+  --accent: #4e8a96;
+  --accent-hover: #67a2ae;
+  --accent-fg: #ffffff;
+  --ring: #4e8a9640;
+  --success: #3a7a6c;
+  --warning: #aa8a3c;
+  --destructive: #b84a4a;
+  --destructive-fg: #ffffff;
+}
+
+[data-theme="coffee"] {
+  color-scheme: light;
+  --bg: #f3efe9;
+  --surface: #e6dfd6;
+  --surface-2: #d6ccc2;
+  --surface-hover: #c3b9ae;
+  --border: #c3b9ae;
+  --fg: #463f3a;
+  --muted: #8a817c;
+  --accent: #765d56;
+  --accent-hover: #8f746d;
+  --accent-fg: #ffffff;
+  --ring: #765d5640;
+  --success: #5d7656;
+  --warning: #a68b56;
+  --destructive: #a65656;
+  --destructive-fg: #ffffff;
+}

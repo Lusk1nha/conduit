@@ -120,10 +120,10 @@ conduit/
 
 ### Phase 1 — Foundation
 
-- [ ] Monorepo setup (Cargo workspaces + pnpm + Turborepo)
-- [ ] Shared domain types and error handling
-- [ ] SQLite schema + migrations (SQLx)
-- [ ] Basic Tauri shell with React routing
+- [x] Monorepo setup (Cargo workspaces + pnpm + Turborepo)
+- [x] Shared domain types and error handling
+- [x] SQLite schema + migrations (SQLx)
+- [x] Basic Tauri shell with React routing
 
 ### Phase 2 — Process Orchestration
 

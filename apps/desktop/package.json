@@ -2,12 +2,41 @@
   "name": "@conduit/desktop",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "description": "Conduit Tauri desktop application",
   "scripts": {
-    "dev": "echo \"[desktop] placeholder — Tauri + React shell lands in Phase 1: 'Basic Tauri shell with React routing'\"",
-    "build": "echo \"[desktop] build placeholder\"",
-    "lint": "echo \"[desktop] lint placeholder\"",
-    "type-check": "echo \"[desktop] type-check placeholder\"",
-    "test": "echo \"[desktop] test placeholder\""
+    "dev": "cross-env WEBKIT_DISABLE_DMABUF_RENDERER=1 tauri dev",
+    "dev:vite": "vite",
+    "build": "tsc --noEmit && vite build",
+    "build:vite": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "tauri": "tauri",
+    "tauri:build": "tauri build"
+  },
+  "dependencies": {
+    "@conduit/theme": "workspace:*",
+    "@conduit/ui": "workspace:*",
+    "@conduit/utils": "workspace:*",
+    "@fontsource-variable/jetbrains-mono": "catalog:",
+    "@phosphor-icons/react": "catalog:",
+    "@tanstack/react-query": "catalog:",
+    "@tauri-apps/api": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "react-router-dom": "catalog:",
+    "zustand": "catalog:"
+  },
+  "devDependencies": {
+    "@conduit/tsconfig": "workspace:*",
+    "@tailwindcss/vite": "catalog:",
+    "cross-env": "catalog:",
+    "@tauri-apps/cli": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
   }
 }
