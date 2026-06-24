@@ -64,7 +64,7 @@ export function ThemeSwitcher({
           <div
             className={cn(
               "absolute right-0 z-50 w-64 overflow-hidden rounded-sm border border-(--border) bg-(--surface) shadow-xl shadow-black/20",
-              direction === "up" ? "bottom-full mb-1" : "top-full mt-1"
+              direction === "up" ? "bottom-full left-full mb-1" : "top-full mt-1"
             )}
           >
             <div className="flex items-center border-b border-(--border)">
